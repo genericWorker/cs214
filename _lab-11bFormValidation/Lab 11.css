@@ -1,0 +1,20 @@
+form {
+  display: inline-block;
+  justify-content: center;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  margin: 1em auto;
+  padding: 10px 20px;
+  width: 500px;
+  border: 3px solid rgb(121, 121, 122);
+
+}
+
+
+
+
+
+
+

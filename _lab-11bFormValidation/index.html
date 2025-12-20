@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="Lab 11.css">
+<title>jQuery New Account Creation Form</title>
+<style>
+.errorMessage {
+    color: red;
+}
+</style>
+</head>
+<body>
+<h1>New Account Creation Form</h1>
+<form id="new-account-form">
+<input type="email" size="30" name="email" value="" placeholder="Enter your email address">
+<div id="emailErrorMessage"  class="errorMessage"></div>
+<p><input type="password" size="30" name="password1" value="" placeholder="Enter a password"></p>
+<p></p><input type="password" size="30" name="password2" value="" placeholder="Reenter the password">
+<div id="passwordErrorMessage" class="errorMessage"></div>
+</p>
+<button type="submit">Create Account</button>
+</form>
+<span id='output' style="font-weight: bold"></span>
+<!--<p>Form Output: <span id="output"></span></p>-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="Lab 11.js">   
+</script>
+</body>
+</html>
