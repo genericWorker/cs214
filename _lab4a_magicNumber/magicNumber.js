@@ -37,12 +37,13 @@ if (isNaN(guessNumber)) {
     guessNumber -= origNumber;
     
     // Final Output
-    outputHtml += `<h3>Your final number is ${guessNumber}</h3>`;
+    outputHtml += `<br><h3>Your final number is ${guessNumber}</h3>`;
+
     // Note: Ensure "magicNumber.png" is in your project folder or the image won't show!
-    outputHtml += '<img src="magicNumber.png" alt="Magic Number Image" style="width:200px;">'; 
-    outputHtml += `<h1>Thanks for playing Magic Number.</h1>`;
+    outputHtml += '<img src="magicNumber.png" alt="Magic Number Image"">'; 
+    outputHtml += `<h2>Thanks for playing Magic Number.</h2>`;
     outputHtml += `<button onclick="window.location.reload()">Play Again?</button>`;
 
     // 3. Inject everything into the body at once
-    document.body.insertAdjacentHTML('beforeend', outputHtml);
+    document.body.innerHTML = outputHtml;
 }
