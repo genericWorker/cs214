@@ -8,6 +8,9 @@ body {
   background: #222;
   background-image: url('https://source.unsplash.com/1600x900/?landscape');
   font-size: 120%;
+  /* The Secret Sauce: Smooth transition */
+  transition: background-image 0.8s ease-in-out;
+  background-color: #222; /* Fallback color while loading */
 }
 
 h2 {
