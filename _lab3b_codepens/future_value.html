@@ -3,34 +3,40 @@
 <head>
     <meta charset="UTF-8">  
     <title>Future Value Application</title>
-    <script>
-    var futureValue;
-    
-    // get user entries
-    var investment = prompt("Enter investment amount as xxxxx.xx", 10000);
-    investment = parseFloat(investment);
-    var rate = prompt("Enter interest rate as xx.x", 7.5);
-    rate = parseFloat(rate);
-    var years = prompt("Enter number of years", 10);
-    years = parseInt(years);
-    
-    // calulate future value
-    futureValue = investment;
-    for (var i = 1; i <= years; i++ ) {
-      futureValue = futureValue + (futureValue * rate / 100);
-    }
-  //  futureValue = parseInt(futureValue);
-    </script>
+    <style>
+        body { font-family: sans-serif; margin: 20px; line-height: 1.6; }
+        .input-group { margin-bottom: 10px; }
+        label { display: inline-block; width: 150px; }
+        input { padding: 5px; width: 150px; }
+        button { margin-top: 10px; padding: 10px 20px; cursor: pointer; }
+        #result { margin-top: 20px; color: #2c3e50; }
+    </style>
 </head>
 <body>
-    <main>
-      <script>
-      document.write("Investment amount = $" + investment.toFixed(2));
-      document.write(" Interest rate = " + rate);
-      document.write(" Years = " + years);
-      document.write(" Future Value is $" + futureValue.toFixed(2) + "<br><br>");
-        </script>
-        Thanks for using the Future Value application.
-    </main>
+    <h2>Future Value Calculator</h2>
+    
+    <div class="input-group">
+        <label for="investment">Investment Amount:</label>
+        <input type="number" id="investment" value="10000" step="0.01">
+    </div>
+    
+    <div class="input-group">
+        <label for="rate">Interest Rate (%):</label>
+        <input type="number" id="rate" value="7.5" step="0.1">
+    </div>
+    
+    <div class="input-group">
+        <label for="years">Number of Years:</label>
+        <input type="number" id="years" value="10">
+    </div>
+
+    <button id="calculate_btn">Calculate Future Value</button>
+
+    <div id="result"></div>
+
+    <hr>
+    <h3><a href="index.html">Back to main menu</a></h3>
+
+    <script src="future_value.js"></script>
 </body>
 </html>
