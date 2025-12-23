@@ -23,8 +23,8 @@ button:hover{
 
 .wrapper{ 
  position: fixed;
- top: 25%; 
- left: 35%; 
+ top: 10%; 
+ left: 30%; 
   margin: auto; 
   display: flex; 
   flex-direction:column;
@@ -34,9 +34,9 @@ button:hover{
   
   border: 3px ridge #bcb5ff; 
   border-radius:1rem; 
-  width: 30%;
+  width: 40%;
 
-  
+
 }
 
 .displayTime{

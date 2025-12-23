@@ -8,7 +8,7 @@ window.onload =
   let appendTens = document.getElementById("tens");
   let appendSeconds = 
       document.getElementById("seconds");
- let appendMinutes = 
+  let appendMinutes = 
       document.getElementById("minutes");
   
   let buttonStart = document.getElementById("button-start");

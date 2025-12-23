@@ -19,11 +19,11 @@ const calculateFV = () => {
     }
 
     // 4. Create and display the output string
-    let output = `<h3>Results:</h3>`;
-    output += `<h3>Investment amount = $${investment.toFixed(2)}<br>`;
+    let output = "";
+    output += `<h4>Investment amount = $${investment.toFixed(2)}<br>`;
     output += `Interest rate = ${rate}%<br>`;
     output += `Years = ${years}<br>`;
-    output += `Future Value is $${futureValue.toFixed(2)}</h3><br>`;
+    output += `Future Value is $${futureValue.toFixed(2)}</h4`;
 
     document.getElementById("result").innerHTML = output;
 };

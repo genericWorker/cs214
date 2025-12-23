@@ -1,11 +1,21 @@
-var miles = parseFloat(prompt("Enter miles driven"));
-var gallons = parseFloat(prompt("Enter gallons of gas used"));
+// Function to handle the calculation
+const calculateMPG = (event) => {
+    // Prevent the form from actually submitting/refreshing the page
+    event.preventDefault();
 
-if (!isNaN(miles) && miles > 0 && !isNaN(gallons) && gallons > 0) { 
-    let mpg = (miles / gallons).toFixed(2);
-    // Using innerHTML to add some styling at the same time
-    document.getElementById("result").innerHTML = `<h3>Your MPG is: ${mpg}</h3>`; 
-} else {
-    alert("One or both entries are invalid");
-    document.getElementById("result").textContent = "Invalid input. Please refresh.";
-}
+    // Get values from the input fields
+    const miles = parseFloat(document.getElementById("miles").value);
+    const gallons = parseFloat(document.getElementById("gallons").value);
+    const resultDiv = document.getElementById("result");
+
+    // Logic validation
+    if (miles > 0 && gallons > 0) {
+        const mpg = (miles / gallons).toFixed(2);
+        resultDiv.innerHTML = `<h4>Your MPG is: ${mpg}</h4>`;
+    } else {
+        resultDiv.innerHTML = `<h3 style="color:red;">Please enter values greater than zero.</h3>`;
+    }
+};
+
+// Attach the event listener to the form
+document.getElementById("mpgForm").addEventListener("submit", calculateMPG);

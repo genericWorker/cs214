@@ -1,0 +1,80 @@
+
+    /* Shared styling with your calculator */
+        body { 
+            font-family: system-ui, -apple-system, sans-serif; 
+            background-color: #f4f4f9;
+            margin: 0;
+         
+            padding-top: 50px; 
+        }
+      
+
+        .menu-card {
+           background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+            width: 20;
+            max-width: 75px;
+        }
+
+        h2 { 
+            margin-top: 0; 
+            text-align: center; 
+            color: #333;
+            border-bottom: 2px solid #27ae32;
+            padding-bottom: 10px;
+        }
+
+        ol { 
+            list-style: none; 
+            padding: 0; 
+            margin-top: 20px;
+        }
+
+        li { 
+            margin-bottom: 15px; 
+        
+        }
+
+        /* Making links look like buttons for better UI */
+        a { 
+            display: block;
+            text-decoration: none;
+            background-color: #ffffff;
+            color: #11528b;
+            padding: 12px 15px;
+            border: 1px solid #11528b;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        a:hover {
+            background-color: #11528b;
+            color: white;
+            transform: translateX(5px); /* Subtle slide effect */
+        }
+
+                /* Small style block to keep the form neat */
+        /*body { font-family: sans-serif; margin: 20px; }*/
+        .input-group { margin-bottom: 10px; }
+        label { display: inline-block; width: 150px; }
+        #result { margin-top: 20px; color: rgb(16, 145, 184); }
+        button {
+            width: 25%;
+            padding: 12px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+     
+        }
+        button:hover {
+            background-color: #219150;
+        }
+
+        
+  
