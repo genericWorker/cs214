@@ -1,6 +1,13 @@
 "use strict";
 
 const calculateFV = () => {
+    const resultDiv = document.getElementById("result");
+
+    // 1. TOGGLE: If result is currently showing, hide it and STOP
+    if (resultDiv.style.display === "block") {
+        resultDiv.style.display = "none";
+        return; // This prevents the calculation from running again
+    }
     // 1. Get user entries from the DOM
     let investment = parseFloat(document.getElementById("investment").value);
     let rate = parseFloat(document.getElementById("rate").value);
@@ -25,7 +32,8 @@ const calculateFV = () => {
     output += `Years = ${years}<br>`;
     output += `Future Value is $${futureValue.toFixed(2)}</h4`;
 
-    document.getElementById("result").innerHTML = output;
+    resultDiv.innerHTML = output;
+    resultDiv.style.display = "block";
 };
 
 // 5. Attach the function to the button click event
