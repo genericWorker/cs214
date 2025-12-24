@@ -26,16 +26,16 @@
         <div class="button-group">
             <input type="button" id="add" value="Add Score">
         </div>
-        
+        <span id="error_message" style="color: red; height: 1.2em;"></span>
         <div class="button-group" style="margin-top: 10px;">
             <input type="button" id="display_results" value="Results" style="background-color: var(--secondary-color);">
             <input type="button" id="display_scores" value="Scores" style="background-color: var(--secondary-color);">
         </div>
 
-        <div id="results" style="display:none">
+        <div id="avgs" style="display:none">
             <hr>
-            <h2>Results</h2>
-            <div id="result">
+            <h3>Results</h3>
+            <div id="avgs">
                 Average Score: <span id="avgScore">0</span><br>
                 High Score: <span id="highScore">0</span>
             </div>
@@ -43,7 +43,7 @@
 
         <div id="scores" style="display:none">
             <hr>
-            <h2>Scores</h2>
+            <h3>Scores</h3>
             <table id="scores_table">
                 <thead>
                     <tr>
@@ -52,7 +52,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    </tbody>
+                </tbody>
             </table>
         </div>
         <hr>

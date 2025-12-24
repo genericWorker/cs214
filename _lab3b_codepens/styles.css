@@ -180,3 +180,21 @@ hr {
 }
 
 .back-menu:hover { text-decoration: underline; }
+
+#scores_table {
+    width: 100%;            /* Makes the table fill the container */
+    border-collapse: collapse; /* Removes the double-border/gap between cells */
+    margin-top: 10px;
+}
+
+#scores_table th, 
+#scores_table td {
+    border-bottom: 1px solid #ddd; /* Adds a clean line between rows */
+    padding: 8px;                 /* Controls the vertical space inside rows */
+    text-align: left;             /* Ensures text aligns to the left (adjust to center if preferred) */
+}
+
+#scores_table th {
+    background-color: #f4f4f4;    /* Light background for the header */
+    font-weight: bold;
+}

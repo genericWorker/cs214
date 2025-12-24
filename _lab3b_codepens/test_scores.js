@@ -28,7 +28,7 @@ function getHighScore() {
 }
 
 function initializeResults() {
-    let results = $('#results');
+    let avgs = $('#avgs');
     let high = getHighScore();
     let avg = getAvgScore().toFixed(1);
     $('#highScore').html(high);
@@ -37,8 +37,9 @@ function initializeResults() {
 
 
 function displayResults() {
-    let results = $('#results');
+    let results = $('#avgs');
     results.toggle();
+    $('#error_message').html('');
 }
 
 //  insert a new element in the html table after current index.  Assumes, names and scores are updates already.
@@ -63,15 +64,17 @@ function initializeScoresTable() {
 function displayScores() {
     let scores = $('#scores');
     scores.toggle();
+     $('#error_message').html('');
 }
 
 function addScore() {
     let score = $('#score');
     let name = $('#name');
     if (score.val() === '' || name.val() === '') {
-        alert('Name and score must have values');
+        $('#error_message').html('Name and score must have values');
         return;
     }
+    $('#error_message').html('');
     scoresArr.push(parseInt(score.val()));
     namesArr.push($("#name").val());
     initializeScoresTable();
