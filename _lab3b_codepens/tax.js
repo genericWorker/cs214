@@ -41,7 +41,7 @@ const clearEntries = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-    $("#calculate").addEventListener("click", processEntries);
-    $("#clear").addEventListener("click", clearEntries);
+    $("#calculate_btn").addEventListener("click", processEntries);
+    $("#clear_btn").addEventListener("click", clearEntries);
     $("#sale").focus();
 });
