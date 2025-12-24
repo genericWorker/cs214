@@ -1,21 +1,35 @@
 // Function to handle the calculation
-const calculateMPG = (event) => {
-    // Prevent the form from actually submitting/refreshing the page
-    event.preventDefault();
+const processEntries = () => {
+    // Get the input elements
+    const milesInput = document.getElementById("miles");
+    const gallonsInput = document.getElementById("gallons");
+    const resultInput = document.getElementById("mpg_result");
 
-    // Get values from the input fields
-    const miles = parseFloat(document.getElementById("miles").value);
-    const gallons = parseFloat(document.getElementById("gallons").value);
-    const resultDiv = document.getElementById("result");
+    const miles = parseFloat(milesInput.value);
+    const gallons = parseFloat(gallonsInput.value);
 
     // Logic validation
-    if (miles > 0 && gallons > 0) {
+    if (!isNaN(miles) && !isNaN(gallons) && miles > 0 && gallons > 0) {
         const mpg = (miles / gallons).toFixed(2);
-        resultDiv.innerHTML = `<h4>Your MPG is: ${mpg}</h4>`;
+        // Display result in the disabled input field
+        resultInput.value = mpg;
     } else {
-        resultDiv.innerHTML = `<h3 style="color:red;">Please enter values greater than zero.</h3>`;
+        alert("Please enter valid numbers greater than zero for both fields.");
     }
 };
 
-// Attach the event listener to the form
-document.getElementById("mpgForm").addEventListener("submit", calculateMPG);
+// Function to clear all fields
+const clearEntries = () => {
+    document.getElementById("miles").value = "";
+    document.getElementById("gallons").value = "";
+    document.getElementById("mpg_result").value = "";
+    // Move focus back to the first field for better user experience
+    document.getElementById("miles").focus();
+};
+
+// Attach events when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+    // Standard JS selection instead of the $ shortcut
+    document.getElementById("calculate_btn").addEventListener("click", processEntries);
+    document.getElementById("clear_btn").addEventListener("click", clearEntries);
+});
