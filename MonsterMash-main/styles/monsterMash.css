@@ -1,0 +1,84 @@
+/* 1. Change to relative so it takes up actual space on the page */
+/* 2. Adjust Container to sit closer to the header */
+#container {
+    position: relative;
+    margin: 0 auto;          /* Centers the entire monster stage */
+    width: 800px;            /* Adjust based on your image widths */
+    height: 700px;           /* Height to accommodate the frame and footer below */
+    z-index: 0;
+}
+
+.lightning {
+    display: none;
+    position: absolute;  /* Stays absolute relative to the container */
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+}
+
+body {
+    background-color: #000000;
+    text-align: center;  /* Helps center the footnote text */
+}
+
+/* 2. Position the Header relative to the container instead of the whole screen */
+#top {
+    text-align: center;      /* Centers the image inside the header */
+    padding-top: 15px;       /* Keeps some space at the very top of the page */
+    margin-bottom: -20px;    /* Negative margin pulls the container UP to reduce space */
+    position: relative;      /* Changed from absolute to allow natural centering */
+    z-index: 4;
+}
+
+#top img {
+    display: inline-block;
+    max-width: 100%;         /* Ensures it doesn't overflow on small screens */
+}
+
+/* 3. Keep the frame centered within the container */
+#frame {
+    position: absolute;
+    left: 50%;               /* Move to the middle */
+    transform: translateX(-50%); /* Offset by half its width for perfect centering */
+    top: 50px;               /* Adjust this value to control the gap further */
+    width: 545px;
+    height: 629px;
+    background-image: url("../images/frame.png");
+    z-index: 2;
+    overflow: hidden;
+}
+
+#pic_box {
+    position: relative;
+    left: 91px;
+    top: 84px;
+    width: 367px;
+    height: 460px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#head { height: 172px; }
+#eyes { height: 79px; }
+#nose { height: 86px; }
+#mouth { height: 117px; }
+
+.face {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+}
+
+/* 3. Updated Footnote Style */
+.footnote {
+    display: block;      /* Ensures it sits on its own line */
+    clear: both;         /* Double-checks that no floats interfere */
+    text-align: center;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 12px;
+    color: #33FF66;      /* Matching your green text color */
+    margin-top: 0px;    /* Space between the frame and text */
+    font-style: italic;
+    position: relative;  /* Ensures it follows the container flow */
+}
