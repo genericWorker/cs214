@@ -142,18 +142,18 @@ li a:hover { filter: brightness(85%); }
 /* --- 6. Results & Footer --- */
 #result { 
     display: none; /* Keeps the div hidden until we need it */
-    margin: 4px 0;
+    margin: 6px 0;
     padding: 15px;
     background-color: #eef2f7;
     color: #11528b;
     font-weight: bold;
     border-radius: 4px;
-    text-align: center;
+    text-align: left;
 }
 
 #result h4, 
 #result p {
-    margin: 4px 0;    /* Increased from 2px to 8px for more vertical space */
+    margin: 6px 0;    /* Increased from 2px to 8px for more vertical space */
     line-height: 1.4; /* Standard readable spacing */
 }
 
