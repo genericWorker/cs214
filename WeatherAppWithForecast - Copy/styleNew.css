@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1b1b1b; 
+  /* Initial background */
+  background-image: url('https://images.unsplash.com/photo-1534088568595-a066f7104211?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out; /* Smooth background swap */
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.82); /* Standardized transparency */
+  color: white;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 1em;
+  text-align: left;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* SEARCH SECTION */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px; 
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.6em 1em;
+  border-radius: 24px;
+  background: rgba(124, 124, 124, 0.2);
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 60px);
+  transition: background 0.2s;
+}
+
+input.search-bar:focus {
+  background: rgba(124, 124, 124, 0.35);
+}
+
+button {
+  margin-left: 10px; 
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  background: rgba(124, 124, 124, 0.2);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: rgba(124, 124, 124, 0.4);
+  transform: scale(1.05);
+}
+
+/* WEATHER MAIN INFO */
+.city {
+  margin: 0;
+  font-weight: 600;
+}
+
+.time {
+  font-size: 0.85rem;
+  margin-bottom: 1em;
+  opacity: 0.7;
+}
+
+h1.temp {
+  margin: 0;
+  font-size: 3.5rem;
+  cursor: pointer; /* Indicates it's clickable to toggle units */
+}
+
+h1.temp:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.feels_like {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 0.9rem;
+}
+
+/* HI/LOW SECTION */
+.temp-range {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.temp-range label {
+  font-weight: bold;
+  margin-right: 4px;
+  opacity: 0.6;
+}
+
+/* ICON & DESCRIPTION */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  margin: 0.5em 0;
+  width: 100%;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin-left: -10px;
+}
+
+.description {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+
+/* BOTTOM DETAILS */
+.humidity, .wind-details {
+  margin-bottom: 0.5em;
+  font-size: 0.95rem;
+}
+
+.wind-details span {
+  display: block; /* Stack wind and direction */
+  margin-bottom: 2px;
+}
+
+/* LOADING STATE LOGIC */
+.weather.loading {
+  display: none; /* Hide when loading */
+}
+
+/* The "card:has" selector is great, but let's add a fallback just in case */
+.card:has(.weather.loading)::after {
+  content: "Loading weather...";
+  display: block;
+  text-align: center;
+  margin: 40px 0;
+  color: white;
+  font-size: 1.1rem;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  text-align: center;
+  display: block;
+  min-height: 1rem; /* Prevents layout jump when message appears */
+  margin-top: 5px;
+}
+
+.search-hint {
+  font-size: 0.75rem;
+  margin-top: 1.5rem;
+  opacity: 0.5;
+  font-style: italic;
+  line-height: 1.4;
+  color: #d1d5db;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
